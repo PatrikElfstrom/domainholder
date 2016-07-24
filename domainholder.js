@@ -18,6 +18,7 @@ app.engine('handlebars', handlebars({
 }));
 app.set('views', '.');
 app.set('view engine', 'handlebars');
+app.set('trust proxy', true);
 
 
 
@@ -105,8 +106,7 @@ else {
 
     app.get('/', function (req, res) {
         takenColors = [];
-        const host = req.get('host');
-        const domain = host.match(/([a-z0-9-]+.[a-z]{2,3}):?\d{0,5}$/i)[1];
+        const domain = req.hostname;
         const palette = getRandom( palettes );
         const font = getRandom( fonts );
 
