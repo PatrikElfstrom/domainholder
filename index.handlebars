@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title itemprop="name">{{ domain }}</title>
+        <meta name="description" itemprop="description" content="{{ domain }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ font.url }}" rel="stylesheet">
+    </head>
+    <style type="text/css">
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body, .font {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-color: #{{ backgroundColor }};
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        main {
+            width: 100%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            font-family: '{{ font.family }}', sans-serif;
+        }
+
+        main header {
+            display: inline-block;
+            position: relative; 
+            margin-bottom: 5em;
+        }
+
+        main header h1 {
+            font-size: 12vw;
+            color: #{{ textColor }};
+            display: inline-block;
+            line-height: 1;
+        }
+        
+        main header a {
+            color: #{{ textColor }};
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+            line-height: 1;
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            transform: translateY(100%);
+        }
+
+        main footer a {
+            font-size: 3vw;
+            color: #{{ textColor2 }};
+            display: block;
+        }
+    </style>
+    <body>
+        <main>
+            <header>
+                <h1>{{ domain }}</h1>
+                <a class="font" href="{{ font.siteUrl }}">{{ font.family }}</a>
+            </header>
+            <footer>
+                <a href="mailto:info@{{ domain }}">info@{{ domain }}</a>
+            </footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+node_modules
+palettes.json
+fonts.json
+*.sublime*
