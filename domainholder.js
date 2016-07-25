@@ -56,7 +56,7 @@ function updatePalettes( callback ) {
 }
 
 function updateGoogleFonts( callback ) {
-    googleFonts(config.googleFontsApiKey, fonts => {
+    googleFonts( fonts => {
 
         // filter out all fonts with latin
         const latinFonts = fonts.filter( font => {
@@ -120,6 +120,7 @@ else {
         palette.info['url'] = 'https://coolors.co/' + palette.colors.join('-');
 
         res.render( config.template, {
+            googleAnalytics: config.google.analytics,
             domain: domain,
             font: font,
             palette: palette,

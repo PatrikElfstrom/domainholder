@@ -3,8 +3,8 @@
     const https = require('https');
     const config = require('./config');
 
-    const googleFonts = ( apiKey, callback ) => {
-        const url = config.googleFonts.api.url + '?key=' + config.googleFonts.api.key;
+    const googleFonts = ( callback ) => {
+        const url = config.google.fonts.api.url + '?key=' + config.google.fonts.api.key;
 
         https.get(url, res => {
             let responseString = '';
