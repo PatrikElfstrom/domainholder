@@ -106,7 +106,7 @@ else {
 
     app.get('/', function (req, res) {
         takenColors = [];
-        const domain = req.hostname;
+        const domain = req.hostname.replace('www.', '');
         const palette = getRandom( palettes );
         const font = getRandom( fonts );
 
