@@ -19,8 +19,7 @@ app.engine('handlebars', handlebars({
 app.set('views', '.');
 app.set('view engine', 'handlebars');
 app.set('trust proxy', true);
-
-
+app.use(express.static('.'));
 
 function getRandom( array ) {
     return array[Math.floor(Math.random() * array.length)];
