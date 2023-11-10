@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <style type="text/css">
+    html,
+    body {
+      height: 100%;
+    }
     body {
       font-family: "Open Sans", sans-serif;
       background-color: #fff;
@@ -12,6 +16,10 @@
       background: rgb(250, 250, 250);
       color: rgb(102, 102, 102);
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     strong {
@@ -29,11 +37,6 @@
     }
 
     main {
-      width: 90%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       text-align: center;
     }
 
@@ -44,7 +47,6 @@
 
     main header h1 {
       font-size: clamp(46px, 11vw, 128px);
-      white-space: nowrap;
       text-align: center;
       font-weight: 600;
       letter-spacing: clamp(-5px, calc(-1px - 1vw), 5px);
